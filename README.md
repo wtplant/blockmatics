@@ -1,2 +1,2 @@
 # blockmatics
-This is a steamlit app deployed with docker
+This is a streamlit app deployed with docker
