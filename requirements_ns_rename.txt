@@ -1,0 +1,5 @@
+jsonrpcclient==4.0.2
+pytz==2022.1
+requests==2.28.1
+streamlit==1.10.0
+web3==5.29.0
