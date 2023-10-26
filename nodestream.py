@@ -23,18 +23,18 @@ with col1:
 
      st.write("**Beacon Chain**")
 
-     res = requests.get('https://still-damp-hill.quiknode.pro/c3d2d8037f51c701bbc871826878ad0e1e7d7481/eth/v1/beacon/headers')
+     res = requests.get('<PLACEHOLDER>')
      
      st.write("headers",res)  
 
-     res2 = requests.get('https://still-damp-hill.quiknode.pro/c3d2d8037f51c701bbc871826878ad0e1e7d7481/eth/v1/beacon/genesis')
+     res2 = requests.get('<PLACE HOLDER>')
      
      st.write("genesis",res2) 
 
           
 with col2:
 #BSC
-     w4 = Web3(HTTPProvider('https://still-damp-hill.bsc.quiknode.pro/f8a47a05afaaa075ee473ab78741f3b48892c278/'))
+     w4 = Web3(HTTPProvider('https://binance.llamarpc.com'))
 
      st.write('**BSC** -'"chain ID:",w4.eth.chain_id,'hexidecimal: 0x38')
 
@@ -45,7 +45,7 @@ with col2:
 
 with col3:
 #Matic
-     w5 = Web3(HTTPProvider('https://still-damp-hill.matic.quiknode.pro/f8a47a05afaaa075ee473ab78741f3b48892c278/'))
+     w5 = Web3(HTTPProvider('https://polygon.llamarpc.com	'))
 
      st.write("**Matic** -""chain ID:",w5.eth.chain_id,'hexidecimal: 0x89')
 
@@ -58,7 +58,8 @@ with col4:
 #Solana
 #need to change out endpoint
      st.write("**Solana**")  
-     response = requests.post("https://frosty-floral-river.solana-mainnet.quiknode.pro/2d019502e11e6a92dde5aeafaa8db1e7cd0f30a8/", json=request("getBlockHeight"))
+   #got the below rpc from https://docs.solana.com/cluster/rpc-endpoints
+     response = requests.post("https://api.mainnet-beta.solana.com", json=request("getBlockHeight"))
      parsed = parse(response.json())
      if isinstance(parsed, Ok):
           st.write("block height:",parsed.result)
