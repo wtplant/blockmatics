@@ -5,7 +5,7 @@ from jsonrpcclient import request, parse, Ok
 import logging
 import requests
 from datetime import datetime 
-import pytz
+
 
    
 col1, col2, col3, col4 = st.columns(4)
@@ -15,7 +15,6 @@ with col1:
      
      st.write("**Ethereum**-chain ID:",w3.eth.chain_id, '0x1')
 
-     st.write('**QUICKNODE**-',"block height:",w3.eth.blockNumber)
      w31 = Web3(HTTPProvider('https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW'))
      st.write('**ALCHEMY**-',"block height:",w31.eth.blockNumber)
 
