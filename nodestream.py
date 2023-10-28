@@ -1,78 +1,71 @@
-import streamlit as st 
-import streamlit.components.v1 as components
-from web3 import Web3, HTTPProvider
-from jsonrpcclient import request, parse, Ok
-import logging
-import requests
-from datetime import datetime 
+# Importing necessary libraries
+import streamlit as st  # A library to create web apps for machine learning and data science
+import streamlit.components.v1 as components  # Importing components module for Streamlit
+from web3 import Web3, HTTPProvider  # Importing Web3 to interact with Ethereum blockchain and HTTPProvider to connect to a specific Ethereum node
+# import logging  # Logging library, not used in the script, so commented out
+import requests  # A library to make HTTP requests
+# from datetime import datetime  # A library to work with dates, not used in the script, so commented out
 
-
-   
+# Creating four columns in the Streamlit web app
 col1, col2, col3, col4 = st.columns(4)
 
+# Column 1: Displaying information about Ethereum blockchain
 with col1:
-#Eth
-     
-     st.write("**Ethereum**-chain ID:",w3.eth.chain_id, '0x1')
+     # Ethereum
+     st.write("**Ethereum**-chain ID:", w3.eth.chain_id, '0x1')  # Displaying Ethereum chain ID (assumes that 'w3' is previously defined)
 
-     w31 = Web3(HTTPProvider('https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW'))
-     st.write('**ALCHEMY**-',"block height:",w31.eth.blockNumber)
+     w31 = Web3(HTTPProvider('https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW'))  # Connecting to Ethereum mainnet using Alchemy
+     st.write('**ALCHEMY**-',"block height:", w31.eth.blockNumber)  # Displaying the current block number of Ethereum blockchain
 
-     st.write ("current gas:",w3.eth.gas_price)
+     st.write("current gas:", w3.eth.gas_price)  # Displaying the current gas price (assumes that 'w3' is previously defined)
 
-     st.write("**Beacon Chain**")
+     st.write("**Beacon Chain**")  # Displaying title for Beacon Chain
 
-     res = requests.get('<PLACEHOLDER>')
-     
-     st.write("headers",res)  
+     res = requests.get('<PLACEHOLDER>')  # Making a GET HTTP request to a specified URL
+     st.write("headers", res)  # Displaying the HTTP response
 
-     res2 = requests.get('<PLACE HOLDER>')
-     
-     st.write("genesis",res2) 
+     res2 = requests.get('<PLACE HOLDER>')  # Making another GET HTTP request to a specified URL
+     st.write("genesis", res2)  # Displaying the HTTP response
 
-          
+# Column 2: Displaying information about Binance Smart Chain
 with col2:
-#BSC
-     w4 = Web3(HTTPProvider('https://binance.llamarpc.com'))
+     # Binance Smart Chain (BSC)
+     w4 = Web3(HTTPProvider('https://binance.llamarpc.com'))  # Connecting to Binance Smart Chain
+     st.write('**BSC** - "chain ID:', w4.eth.chain_id, 'hexidecimal: 0x38')  # Displaying BSC chain ID
+     st.write("block height:", w4.eth.blockNumber)  # Displaying the current block number of BSC
+     st.write("current gas:", w4.eth.gas_price)  # Displaying the current gas price of BSC
 
-     st.write('**BSC** -'"chain ID:",w4.eth.chain_id,'hexidecimal: 0x38')
-
-     st.write("block height:",w4.eth.blockNumber)
-
-     st.write ("current gas:",w4.eth.gas_price)
-     
-
+# Column 3: Displaying information about Polygon (Matic)
 with col3:
-#Matic
-     w5 = Web3(HTTPProvider('https://polygon.llamarpc.com	'))
+     # Polygon (Matic)
+     w5 = Web3(HTTPProvider('https://polygon.llamarpc.com'))  # Connecting to Polygon
+     st.write("**Matic** - " "chain ID:", w5.eth.chain_id, 'hexidecimal: 0x89')  # Displaying Polygon chain ID
+     st.write("block height:", w5.eth.blockNumber)  # Displaying the current block number of Polygon
+     st.write("current gas:", w5.eth.gas_price)  # Displaying the current gas price of Polygon
 
-     st.write("**Matic** -""chain ID:",w5.eth.chain_id,'hexidecimal: 0x89')
-
-     st.write("block height:",w5.eth.blockNumber)
-
-     st.write ("current gas:",w5.eth.gas_price)
-     
-
+# Column 4: Displaying information about Solana
 with col4:
-#Solana
-#need to change out endpoint
-     st.write("**Solana**")  
-   #got the below rpc from https://docs.solana.com/cluster/rpc-endpoints
-     response = requests.post("https://api.mainnet-beta.solana.com", json=request("getBlockHeight"))
-     parsed = parse(response.json())
-     if isinstance(parsed, Ok):
-          st.write("block height:",parsed.result)
+     # Solana
+     st.write("**Solana**")  # Displaying title for Solana
 
+     # Making a POST HTTP request to Solana RPC endpoint
+     response = requests.post("https://api.mainnet-beta.solana.com", json=request("getBlockHeight"))  # Missing 'request' function, you might need to define or import it
+     parsed = parse(response.json())  # Parsing the JSON response
+     if isinstance(parsed, Ok):  # Checking if the parsed result is an instance of 'Ok'
+          st.write("block height:", parsed.result)  # Displaying the block height
+
+# Creating an expander for Ethereum pending transactions
 with st.expander("Eth Pending tx"):  
-          st.write('The latest block number is: ', str(w3.eth.blockNumber) + '\n') 
+          st.write('The latest block number is: ', str(w3.eth.blockNumber) + '\n')  # Displaying the latest block number
 
-          # retrive pending transactions hash
+          # Retrieving pending transactions hash
           pending_tx_filter = w3.eth.filter('pending')
-          pending_tx = pending_tx_filter.get_new_entries()     # this is a list object
+          pending_tx = pending_tx_filter.get_new_entries()  # Getting new entries from the filter
 
-          # loop through the list of transcations and displays the tx hash
+          # Looping through the list of transactions and displaying the transaction hash
           for hash in pending_tx:
-               st.write('Hash of a Pending Transaction:' , w3.toHex(hash))
+               st.write('Hash of a Pending Transaction:', w3.toHex(hash))  # Converting the hash to hexadecimal and displaying it
+
 
    
 
