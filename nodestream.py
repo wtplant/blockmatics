@@ -2,9 +2,8 @@
 import streamlit as st  # A library to create web apps for machine learning and data science
 import streamlit.components.v1 as components  # Importing components module for Streamlit
 from web3 import Web3, HTTPProvider  # Importing Web3 to interact with Ethereum blockchain and HTTPProvider to connect to a specific Ethereum node
-# import logging  # Logging library, not used in the script, so commented out
 import requests  # A library to make HTTP requests
-# from datetime import datetime  # A library to work with dates, not used in the script, so commented out
+
 
 # Creating four columns in the Streamlit web app
 col1, col2, col3, col4 = st.columns(4)
