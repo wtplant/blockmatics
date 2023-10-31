@@ -11,10 +11,10 @@ col1, col2, col3, col4 = st.columns(4)
 # Column 1: Displaying information about Ethereum blockchain
 with col1:
      # Ethereum
-     st.write("**Ethereum**-chain ID:", w3.eth.chain_id, '0x1')  # Displaying Ethereum chain ID (assumes that 'w3' is previously defined)
+     #st.write("**Ethereum**-chain ID:", w3.eth.chain_id, '0x1')  # Displaying Ethereum chain ID (assumes that 'w3' is previously defined)
 
-     w31 = Web3(HTTPProvider('https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW'))  # Connecting to Ethereum mainnet using Alchemy
-     st.write('**ALCHEMY**-',"block height:", w31.eth.blockNumber)  # Displaying the current block number of Ethereum blockchain
+     w3 = Web3(HTTPProvider('https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW'))  # Connecting to Ethereum mainnet using Alchemy
+     st.write('**ALCHEMY**-',"block height:", w3.eth.blockNumber)  # Displaying the current block number of Ethereum blockchain
 
      st.write("current gas:", w3.eth.gas_price)  # Displaying the current gas price (assumes that 'w3' is previously defined)
 
