@@ -4,7 +4,7 @@ import streamlit.components.v1 as components  # Importing components module for 
 from web3 import Web3, HTTPProvider  # Importing Web3 to interact with Ethereum blockchain and HTTPProvider to connect to a specific Ethereum node
 import requests  # A library to make HTTP requests
 
-st.title('BlockSream Dashboard')
+st.title('BlockStream Dashboard')
 # Creating four columns in the Streamlit web app
 col1, col2, col3, col4 = st.columns(4)
 
@@ -12,7 +12,7 @@ col1, col2, col3, col4 = st.columns(4)
 with col1:
      st.header('Ethereum', divider='rainbow')
      w3 = Web3(HTTPProvider('https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW'))  # Connecting to Ethereum mainnet using Alchemy
-     st.write("**Ethereum**-chain ID:", w3.eth.chain_id, '0x1')  # Displaying Ethereum chain ID (assumes that 'w3' is previously defined)
+     st.write("**chain ID-**", w3.eth.chain_id, '0x1')  # Displaying Ethereum chain ID 
      st.write('**block height:**', w3.eth.blockNumber)  # Displaying the current block number of Ethereum blockchain
 
      st.write("current gas:", w3.eth.gas_price)  # Displaying the current gas price (assumes that 'w3' is previously defined)
@@ -29,7 +29,7 @@ with col1:
      
 # Column 2: Displaying information about Binance Smart Chain
 with col2:
-     # Binance Smart Chain (BSC)
+     st.header('Binance Smart Chain(BSC)', divider='orange')
      w4 = Web3(HTTPProvider('https://binance.llamarpc.com'))  # Connecting to Binance Smart Chain
      st.write('**BSC** - "chain ID:', w4.eth.chain_id, 'hexidecimal: 0x38')  # Displaying BSC chain ID
      st.write("block height:", w4.eth.blockNumber)  # Displaying the current block number of BSC
@@ -37,7 +37,7 @@ with col2:
 
 # Column 3: Displaying information about Polygon (Matic)
 with col3:
-     # Polygon (Matic)
+      st.header('Polygon (Matic)', divider='violet')
      w5 = Web3(HTTPProvider('https://polygon.llamarpc.com'))  # Connecting to Polygon
      st.write("**Matic** - " "chain ID:", w5.eth.chain_id, 'hexidecimal: 0x89')  # Displaying Polygon chain ID
      st.write("block height:", w5.eth.blockNumber)  # Displaying the current block number of Polygon
