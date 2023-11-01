@@ -45,7 +45,7 @@ with col3:
 
 # Column 4: Displaying information about Solana
 with col4:
-     # Solana
+     '''# Solana'''
      #st.write("**Solana**")  # Displaying title for Solana
 
      # Making a POST HTTP request to Solana RPC endpoint
@@ -55,16 +55,16 @@ with col4:
           #st.write("block height:", parsed.result)  # Displaying the block height
 
 # Creating an expander for Ethereum pending transactions
-with st.expander("Eth Pending tx"):  
-          st.write('The latest block number is: ', str(w3.eth.blockNumber) + '\n')  # Displaying the latest block number
+#with st.expander("Eth Pending tx"):  
+          #st.write('The latest block number is: ', str(w3.eth.blockNumber) + '\n')  # Displaying the latest block number
 
           # Retrieving pending transactions hash
           pending_tx_filter = w3.eth.filter('pending')
           pending_tx = pending_tx_filter.get_new_entries()  # Getting new entries from the filter
 
           # Looping through the list of transactions and displaying the transaction hash
-          for hash in pending_tx:
-               st.write('Hash of a Pending Transaction:', w3.toHex(hash))  # Converting the hash to hexadecimal and displaying it
+          #for hash in pending_tx:
+               #st.write('Hash of a Pending Transaction:', w3.toHex(hash))  # Converting the hash to hexadecimal and displaying it
 
 
    
