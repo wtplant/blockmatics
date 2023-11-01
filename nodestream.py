@@ -4,16 +4,15 @@ import streamlit.components.v1 as components  # Importing components module for 
 from web3 import Web3, HTTPProvider  # Importing Web3 to interact with Ethereum blockchain and HTTPProvider to connect to a specific Ethereum node
 import requests  # A library to make HTTP requests
 
-
+st.title('BlockSream Dashboard')
 # Creating four columns in the Streamlit web app
 col1, col2, col3, col4 = st.columns(4)
 
 # Column 1: Displaying information about Ethereum blockchain
 with col1:
      # Ethereum
-     #st.write("**Ethereum**-chain ID:", w3.eth.chain_id, '0x1')  # Displaying Ethereum chain ID (assumes that 'w3' is previously defined)
-
      w3 = Web3(HTTPProvider('https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW'))  # Connecting to Ethereum mainnet using Alchemy
+     st.write("**Ethereum**-chain ID:", w3.eth.chain_id, '0x1')  # Displaying Ethereum chain ID (assumes that 'w3' is previously defined)
      st.write('**ALCHEMY**-',"block height:", w3.eth.blockNumber)  # Displaying the current block number of Ethereum blockchain
 
      st.write("current gas:", w3.eth.gas_price)  # Displaying the current gas price (assumes that 'w3' is previously defined)
@@ -47,13 +46,13 @@ with col3:
 # Column 4: Displaying information about Solana
 with col4:
      # Solana
-     st.write("**Solana**")  # Displaying title for Solana
+     #st.write("**Solana**")  # Displaying title for Solana
 
      # Making a POST HTTP request to Solana RPC endpoint
-     response = requests.post("https://api.mainnet-beta.solana.com", json=request("getBlockHeight"))  # Missing 'request' function, you might need to define or import it
-     parsed = parse(response.json())  # Parsing the JSON response
-     if isinstance(parsed, Ok):  # Checking if the parsed result is an instance of 'Ok'
-          st.write("block height:", parsed.result)  # Displaying the block height
+     #response = requests.post("https://api.mainnet-beta.solana.com", json=request("getBlockHeight"))  # Missing 'request' function, you might need to define or import it
+     #parsed = parse(response.json())  # Parsing the JSON response
+     #if isinstance(parsed, Ok):  # Checking if the parsed result is an instance of 'Ok'
+          #st.write("block height:", parsed.result)  # Displaying the block height
 
 # Creating an expander for Ethereum pending transactions
 with st.expander("Eth Pending tx"):  
