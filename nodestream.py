@@ -37,7 +37,7 @@ with col2:
 
 # Column 3: Displaying information about Polygon (Matic)
 with col3:
-      st.header('Polygon (Matic)', divider='violet')
+     st.header('Polygon (Matic)', divider='violet')
      w5 = Web3(HTTPProvider('https://polygon.llamarpc.com'))  # Connecting to Polygon
      st.write("**Matic** - " "chain ID:", w5.eth.chain_id, 'hexidecimal: 0x89')  # Displaying Polygon chain ID
      st.write("block height:", w5.eth.blockNumber)  # Displaying the current block number of Polygon
