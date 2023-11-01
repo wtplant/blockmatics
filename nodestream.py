@@ -59,8 +59,8 @@ with col4:
           #st.write('The latest block number is: ', str(w3.eth.blockNumber) + '\n')  # Displaying the latest block number
 
           # Retrieving pending transactions hash
-          pending_tx_filter = w3.eth.filter('pending')
-          pending_tx = pending_tx_filter.get_new_entries()  # Getting new entries from the filter
+          #pending_tx_filter = w3.eth.filter('pending')
+          #pending_tx = pending_tx_filter.get_new_entries()  # Getting new entries from the filter
 
           # Looping through the list of transactions and displaying the transaction hash
           #for hash in pending_tx:
