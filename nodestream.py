@@ -20,10 +20,10 @@ with col1:
 
      st.write("**Beacon Chain**")  # Displaying title for Beacon Chain
 
-     res = requests.get('<PLACEHOLDER>')  # Making a GET HTTP request to a specified URL
+     res = requests.get('<https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW>')  # Making a GET HTTP request to a specified URL
      st.write("headers", res)  # Displaying the HTTP response
 
-     res2 = requests.get('<PLACE HOLDER>')  # Making another GET HTTP request to a specified URL
+     res2 = requests.get('https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW')  # Making another GET HTTP request to a specified URL
      st.write("genesis", res2)  # Displaying the HTTP response
 
 # Column 2: Displaying information about Binance Smart Chain
