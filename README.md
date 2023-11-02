@@ -4,6 +4,9 @@ This includes new blocks produced on the top chains by TVL, as well as some nota
 
 **streamlit docs:**
 https://docs.streamlit.io/
+**JSON RPC docs**
+https://web3py.readthedocs.io/en/stable/web3.eth.html
+https://docs.alchemy.com/reference/chain-apis-overview
 
 *Set up an EC2 instance(chainstream) with port mapping to: **8501***
 
