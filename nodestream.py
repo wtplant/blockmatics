@@ -17,6 +17,16 @@ with col1:
 
      st.write("current gas:", w3.eth.gas_price)  # Displaying the current gas price (assumes that 'w3' is previously defined)
 
+     # Create a filter to retrieve pending transactions
+     pending_tx_filter = w3.eth.filter('pending')
+
+# Retrieve the list of pending transaction hashes
+     pending_tx_hashes = pending_tx_filter.get_new_entries()
+
+# Loop through the list of transaction hashes and display them
+     for tx_hash in pending_tx_hashes:
+     st.write('Hash of a Pending Transaction:', w3.toHex(tx_hash))
+
      
      #st.write("**Beacon Chain**")  # Displaying title for Beacon Chain
 
