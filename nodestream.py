@@ -44,6 +44,11 @@ with col2:
      st.write('**BSC** - "chain ID:', w4.eth.chain_id, 'hexidecimal: 0x38')  # Displaying BSC chain ID
      st.write("block height:", w4.eth.blockNumber)  # Displaying the current block number of BSC
      st.write("current gas:", w4.eth.gas_price)  # Displaying the current gas price of BSC
+     #pending transaction
+     pending_tx_filter = w4.eth.filter('pending')
+     pending_tx_hashes = pending_tx_filter.get_new_entries()
+     for tx_hash in pending_tx_hashes:
+         st.write('Hash of a Pending Transaction:', w4.toHex(tx_hash))
 
 # Column 3: Displaying information about Polygon (Matic)
 with col3:
@@ -52,10 +57,15 @@ with col3:
      st.write("**Matic** - " "chain ID:", w5.eth.chain_id, 'hexidecimal: 0x89')  # Displaying Polygon chain ID
      st.write("block height:", w5.eth.blockNumber)  # Displaying the current block number of Polygon
      st.write("current gas:", w5.eth.gas_price)  # Displaying the current gas price of Polygon
+     #pnding tx
+     pending_tx_filter = w5.eth.filter('pending')
+     pending_tx_hashes = pending_tx_filter.get_new_entries()
+     for tx_hash in pending_tx_hashes:
+         st.write('Hash of a Pending Transaction:', w5.toHex(tx_hash))
 
 # Column 4: Displaying information about Solana
 with col4:
-     '''solana'''
+     
      #st.write("**Solana**")  # Displaying title for Solana
 
      # Making a POST HTTP request to Solana RPC endpoint
