@@ -55,10 +55,7 @@ with col3:
      st.write("block height:", w5.eth.blockNumber)  # Displaying the current block number of Polygon
      st.write("current gas:", w5.eth.gas_price)  # Displaying the current gas price of Polygon
      #pnding tx
-     pending_tx_filter = w5.eth.filter('pending')
-     pending_tx_hashes = pending_tx_filter.get_new_entries()
-     for tx_hash in pending_tx_hashes:
-         st.write('Hash of a Pending Transaction:', w5.toHex(tx_hash))
+     
 
 # Column 4: Displaying information about Solana
 #with col4:
