@@ -64,7 +64,7 @@ with col3:
          st.write('Hash of a Pending Transaction:', w5.toHex(tx_hash))
 
 # Column 4: Displaying information about Solana
-with col4:
+#with col4:
      
      #st.write("**Solana**")  # Displaying title for Solana
 
