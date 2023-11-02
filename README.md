@@ -4,6 +4,9 @@ This includes new blocks produced on the top chains by TVL, as well as some nota
 
 **streamlit docs:**
 https://docs.streamlit.io/
+to run the code temporarily on the server run:
+`python3 -m streamlit run nodestream.py`
+
 **JSON RPC docs**
 https://web3py.readthedocs.io/en/stable/web3.eth.html
 https://docs.alchemy.com/reference/chain-apis-overview
