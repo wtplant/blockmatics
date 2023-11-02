@@ -45,10 +45,7 @@ with col2:
      st.write("block height:", w4.eth.blockNumber)  # Displaying the current block number of BSC
      st.write("current gas:", w4.eth.gas_price)  # Displaying the current gas price of BSC
      #pending transaction
-     pending_tx_filter = w4.eth.filter('pending')
-     pending_tx_hashes = pending_tx_filter.get_new_entries()
-     for tx_hash in pending_tx_hashes:
-         st.write('Hash of a Pending Transaction:', w4.toHex(tx_hash))
+     # this method doesn't work for bsc -pending_tx_filter = w4.eth.filter('pending')
 
 # Column 3: Displaying information about Polygon (Matic)
 with col3:
