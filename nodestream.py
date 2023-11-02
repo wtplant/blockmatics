@@ -25,7 +25,7 @@ with col1:
 
 # Loop through the list of transaction hashes and display them
      for tx_hash in pending_tx_hashes:
-     st.write('Hash of a Pending Transaction:', w3.toHex(tx_hash))
+         st.write('Hash of a Pending Transaction:', w3.toHex(tx_hash))
 
      
      #st.write("**Beacon Chain**")  # Displaying title for Beacon Chain
