@@ -6,7 +6,7 @@ import requests  # A library to make HTTP requests
 
 st.title('BlockStream Dashboard')
 # Creating four columns in the Streamlit web app
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3, col4 = st.columns(4,gap="medium")
 
 # Column 1: Displaying information about Ethereum blockchain
 with col1:
