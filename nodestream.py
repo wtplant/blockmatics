@@ -59,7 +59,7 @@ with col3:
 
 # Column 4: Displaying information about Solana
 with col4:
-     st.image(1939.png, caption='BlockStream')
+     st.image('1939.png', caption='BlockStream')
      
      #st.write("**Solana**")  # Displaying title for Solana
 
