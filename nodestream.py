@@ -4,12 +4,15 @@ import streamlit.components.v1 as components  # Importing components module for 
 from web3 import Web3, HTTPProvider  # Importing Web3 to interact with Ethereum blockchain and HTTPProvider to connect to a specific Ethereum node
 import requests  # A library to make HTTP requests
 
-st.title('BlockStream Dashboard')
 # Creating four columns in the Streamlit web app
 col1, col2, col3, col4 = st.columns(4,gap="medium")
 
-# Column 1: Displaying information about Ethereum blockchain
 with col1:
+     st.image('1939.png', caption='BlockStream')
+     st.title('BlockStream Dashboard')
+     
+# Column 1: Displaying information about Ethereum blockchain
+with col2:
      st.header('Ethereum', divider='rainbow')
      w3 = Web3(HTTPProvider('https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW'))  # Connecting to Ethereum mainnet using Alchemy
      st.write("**chain ID-**", w3.eth.chain_id, '0x1')  # Displaying Ethereum chain ID 
@@ -38,7 +41,7 @@ with col1:
      
      
 # Column 2: Displaying information about Binance Smart Chain
-with col2:
+with col3:
      st.header('Binance Smart Chain(BSC)', divider='orange')
      w4 = Web3(HTTPProvider('https://binance.llamarpc.com'))  # Connecting to Binance Smart Chain
      st.write('**BSC** - "chain ID:', w4.eth.chain_id, 'hexidecimal: 0x38')  # Displaying BSC chain ID
@@ -48,18 +51,13 @@ with col2:
      # this method doesn't work for bsc -pending_tx_filter = w4.eth.filter('pending')
 
 # Column 3: Displaying information about Polygon (Matic)
-with col3:
+with col4:
      st.header('Polygon (Matic)', divider='violet')
      w5 = Web3(HTTPProvider('https://polygon.llamarpc.com'))  # Connecting to Polygon
      st.write("**Matic** - " "chain ID:", w5.eth.chain_id, 'hexidecimal: 0x89')  # Displaying Polygon chain ID
      st.write("block height:", w5.eth.blockNumber)  # Displaying the current block number of Polygon
      st.write("current gas:", w5.eth.gas_price)  # Displaying the current gas price of Polygon
      #pnding tx
-     
-
-# Column 4: Displaying information about Solana
-with col4:
-     st.image('1939.png', caption='BlockStream')
      
      #st.write("**Solana**")  # Displaying title for Solana
 
