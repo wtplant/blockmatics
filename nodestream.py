@@ -8,12 +8,12 @@ import requests  # A library to make HTTP requests
 col1, col2, col3, col4 = st.columns(4,gap="medium")
 
 with col1:
-     st.image('1939.png', caption='BlockStream')
+     st.image('1939.png')
      st.markdown('**LIVE FROM THE BLOCKCHAIN**')
      
 # Column 1: Displaying information about Ethereum blockchain
 with col2:
-     st.header('Ethereum', divider='rainbow')
+     st.subheader('Ethereum', anchor=None, divider='rainbow')
      w3 = Web3(HTTPProvider('https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW'))  # Connecting to Ethereum mainnet using Alchemy
      st.write("**chain ID-**", w3.eth.chain_id, '0x1')  # Displaying Ethereum chain ID 
      st.write('**block height:**', w3.eth.blockNumber)  # Displaying the current block number of Ethereum blockchain
