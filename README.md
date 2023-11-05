@@ -13,6 +13,6 @@ https://docs.alchemy.com/reference/chain-apis-overview
 
 *Set up an EC2 instance(chainstream) with port mapping to: **8501***
 
-*Once completed run the following code to keep app running **see video***
+*Once completed run the following code to keep app running **see [video](https://www.youtube.com/watch?v=DflWqmppOAg&t=709s)***
 
 
