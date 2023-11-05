@@ -8,7 +8,7 @@ to run the code temporarily on the server run:
 `python3 -m streamlit run nodestream.py`
 
 **JSON RPC docs**
-https://web3py.readthedocs.io/en/stable/web3.eth.html
+https://web3py.readthedocs.io/en/stable/web3.eth.html |
 https://docs.alchemy.com/reference/chain-apis-overview
 
 *Set up an EC2 instance(chainstream) with port mapping to: **8501***
