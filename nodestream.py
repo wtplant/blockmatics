@@ -15,7 +15,7 @@ with col1:
 with col2:
      st.subheader('Ethereum', divider='rainbow')
      w3 = Web3(HTTPProvider('https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW'))  # Connecting to Ethereum mainnet using Alchemy
-     st.write("**chain ID-**", w3.eth.chain_id, 'hexidecimal:0x1')  # Displaying Ethereum chain ID 
+     st.write("**chain ID:**", w3.eth.chain_id, 'hexidecimal:0x1')  # Displaying Ethereum chain ID 
      st.write('**block height:**', w3.eth.blockNumber)  # Displaying the current block number of Ethereum blockchain
 
      st.write("**current gas:**", w3.eth.gas_price)  # Displaying the current gas price 
@@ -44,7 +44,7 @@ with col2:
 with col3:
      st.subheader('BNB Chain', divider='orange')
      w4 = Web3(HTTPProvider('https://binance.llamarpc.com'))  # Connecting to Binance Smart Chain
-     st.write('**BSC** - "chain ID:', w4.eth.chain_id, 'hexidecimal: 0x38')  # Displaying BSC chain ID
+     st.write('**chain ID:**', w4.eth.chain_id, 'hexidecimal: 0x38')  # Displaying BSC chain ID
      st.write("**block height:**", w4.eth.blockNumber)  # Displaying the current block number of BSC
      st.write("**current gas:**", w4.eth.gas_price)  # Displaying the current gas price of BSC
      #pending transaction
@@ -54,7 +54,7 @@ with col3:
 with col4:
      st.subheader('Polygon', divider='violet')
      w5 = Web3(HTTPProvider('https://polygon.llamarpc.com'))  # Connecting to Polygon
-     st.write("**Matic** - " "chain ID:", w5.eth.chain_id, 'hexidecimal: 0x89')  # Displaying Polygon chain ID
+     st.write("**chain ID:**", w5.eth.chain_id, 'hexidecimal: 0x89')  # Displaying Polygon chain ID
      st.write("**block height:**", w5.eth.blockNumber)  # Displaying the current block number of Polygon
      st.write("**current gas:**", w5.eth.gas_price)  # Displaying the current gas price of Polygon
      #pnding tx
