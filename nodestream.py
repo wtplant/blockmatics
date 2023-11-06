@@ -18,7 +18,7 @@ with col2:
      st.write("**chain ID-**", w3.eth.chain_id, 'hexidecimal:0x1')  # Displaying Ethereum chain ID 
      st.write('**block height:**', w3.eth.blockNumber)  # Displaying the current block number of Ethereum blockchain
 
-     st.write("current gas:", w3.eth.gas_price)  # Displaying the current gas price 
+     st.write("**current gas:**", w3.eth.gas_price)  # Displaying the current gas price 
 
      # Create a filter to retrieve pending transactions
      pending_tx_filter = w3.eth.filter('pending')
@@ -28,7 +28,7 @@ with col2:
 
 # Loop through the list of transaction hashes and display them
      for tx_hash in pending_tx_hashes:
-         st.write('Hash of a Pending Transaction:', w3.toHex(tx_hash))
+         st.write('**Pending Transaction:**', w3.toHex(tx_hash))
 
      
      #st.write("**Beacon Chain**")  # Displaying title for Beacon Chain
@@ -45,8 +45,8 @@ with col3:
      st.subheader('BNB Chain', divider='orange')
      w4 = Web3(HTTPProvider('https://binance.llamarpc.com'))  # Connecting to Binance Smart Chain
      st.write('**BSC** - "chain ID:', w4.eth.chain_id, 'hexidecimal: 0x38')  # Displaying BSC chain ID
-     st.write("block height:", w4.eth.blockNumber)  # Displaying the current block number of BSC
-     st.write("current gas:", w4.eth.gas_price)  # Displaying the current gas price of BSC
+     st.write("**block height:**", w4.eth.blockNumber)  # Displaying the current block number of BSC
+     st.write("**current gas:**", w4.eth.gas_price)  # Displaying the current gas price of BSC
      #pending transaction
      # this method doesn't work for bsc -pending_tx_filter = w4.eth.filter('pending')
 
@@ -55,8 +55,8 @@ with col4:
      st.subheader('Polygon', divider='violet')
      w5 = Web3(HTTPProvider('https://polygon.llamarpc.com'))  # Connecting to Polygon
      st.write("**Matic** - " "chain ID:", w5.eth.chain_id, 'hexidecimal: 0x89')  # Displaying Polygon chain ID
-     st.write("block height:", w5.eth.blockNumber)  # Displaying the current block number of Polygon
-     st.write("current gas:", w5.eth.gas_price)  # Displaying the current gas price of Polygon
+     st.write("**block height:**", w5.eth.blockNumber)  # Displaying the current block number of Polygon
+     st.write("**current gas:**", w5.eth.gas_price)  # Displaying the current gas price of Polygon
      #pnding tx
      
      #st.write("**Solana**")  # Displaying title for Solana
