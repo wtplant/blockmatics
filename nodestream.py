@@ -15,10 +15,10 @@ with col1:
 with col2:
      st.subheader('Ethereum', divider='rainbow')
      w3 = Web3(HTTPProvider('https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW'))  # Connecting to Ethereum mainnet using Alchemy
-     st.write("**chain ID-**", w3.eth.chain_id, '0x1')  # Displaying Ethereum chain ID 
+     st.write("**chain ID-**", w3.eth.chain_id, 'hexidecimal:0x1')  # Displaying Ethereum chain ID 
      st.write('**block height:**', w3.eth.blockNumber)  # Displaying the current block number of Ethereum blockchain
 
-     st.write("current gas:", w3.eth.gas_price)  # Displaying the current gas price (assumes that 'w3' is previously defined)
+     st.write("current gas:", w3.eth.gas_price)  # Displaying the current gas price 
 
      # Create a filter to retrieve pending transactions
      pending_tx_filter = w3.eth.filter('pending')
@@ -42,7 +42,7 @@ with col2:
      
 # Column 2: Displaying information about Binance Smart Chain
 with col3:
-     st.subheader('BNB Smart Chain', divider='orange')
+     st.subheader('BNB Chain', divider='orange')
      w4 = Web3(HTTPProvider('https://binance.llamarpc.com'))  # Connecting to Binance Smart Chain
      st.write('**BSC** - "chain ID:', w4.eth.chain_id, 'hexidecimal: 0x38')  # Displaying BSC chain ID
      st.write("block height:", w4.eth.blockNumber)  # Displaying the current block number of BSC
@@ -52,7 +52,7 @@ with col3:
 
 # Column 3: Displaying information about Polygon (Matic)
 with col4:
-     st.subheader('Polygon Matic', divider='violet')
+     st.subheader('Polygon', divider='violet')
      w5 = Web3(HTTPProvider('https://polygon.llamarpc.com'))  # Connecting to Polygon
      st.write("**Matic** - " "chain ID:", w5.eth.chain_id, 'hexidecimal: 0x89')  # Displaying Polygon chain ID
      st.write("block height:", w5.eth.blockNumber)  # Displaying the current block number of Polygon
