@@ -17,4 +17,7 @@ https://docs.alchemy.com/reference/chain-apis-overview
 
 *Once completed run the following code to keep app running **see [video](https://www.youtube.com/watch?v=DflWqmppOAg&t=709s)***
 
+The cmd to keep app running is:
+`nohup python3 -m streamlit run nodestream.py`
+
 
