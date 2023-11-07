@@ -21,6 +21,10 @@ The cmd to keep app running is:
 `nohup python3 -m streamlit run nodestream.py`
 
 Stop it from running by sending the kill cmd for its process ID: 
-`kill 34064`
+`kill <PID>`
+You can check the process ID of the streamlit process ID with one of the following commands:
+`ps -ef | grep streamlit` 
+`ps aux | grep streamlit`
+
 
 
