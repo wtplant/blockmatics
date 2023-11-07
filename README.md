@@ -20,4 +20,7 @@ https://docs.alchemy.com/reference/chain-apis-overview
 The cmd to keep app running is:
 `nohup python3 -m streamlit run nodestream.py`
 
+Stop it from running by sending the kill cmd for its process ID: 
+`kill 34064`
+
 
