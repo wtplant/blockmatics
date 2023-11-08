@@ -26,5 +26,8 @@ You can check the process ID of the streamlit process ID with one of the followi
 `ps -ef | grep streamlit` 
 `ps aux | grep streamlit`
 
+You can use the following public facing link for williamplant.net `http://ec2-34-238-255-221.compute-1.amazonaws.com:8501/`
+**Note:** *there is no ssl, i.e. https and the port number for streamlit has been appended to the end of the link.*
+
 
 
