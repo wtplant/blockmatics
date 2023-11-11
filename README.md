@@ -31,6 +31,8 @@ You can use the following public facing link for williamplant.net `http://ec2-34
 
 **TO DO**
 - [ ] Move to a free EC2 instance
+- [ ] Add gas value
+- [ ] Add pending tx for BNB and Matic Network
 
 
 
