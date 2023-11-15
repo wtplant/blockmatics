@@ -15,12 +15,14 @@ https://docs.alchemy.com/reference/chain-apis-overview
 
 *Set up an EC2 instance(chainstream) with port mapping to: **8501***
 
+**Edit inbound port rules on AWS:** Navigate to the instance>click on the `security` tab>click the security group>click on edit inbound rules. 
+
 *Once completed run the following code to keep app running **see [video](https://www.youtube.com/watch?v=DflWqmppOAg&t=709s)***
 
 The cmd to keep app running is:
 `nohup python3 -m streamlit run nodestream.py`
 
-Stop it from running by sending the kill cmd for its process ID: 
+Stop it from running by sending the kill cmd for its process ID:
 `kill <PID>`
 You can check the process ID of the streamlit process ID with one of the following commands:
 `ps -ef | grep streamlit` 
@@ -34,6 +36,7 @@ You can use the following public facing link for williamplant.net `http://ec2-34
 - [ ] Move to a free EC2 instance
 - [ ] Add gas value
 - [ ] Add pending tx for BNB and Matic Network
+- [ ] Dockerize deploy
 
 
 
