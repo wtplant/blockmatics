@@ -30,6 +30,7 @@ You can use the following public facing link for williamplant.net `http://ec2-34
 **Note:** *there is no ssl, i.e. https and the port number for streamlit has been appended to the end of the link.*
 
 **TO DO**
+- [x] Set up EC2 free tier instance and test app
 - [ ] Move to a free EC2 instance
 - [ ] Add gas value
 - [ ] Add pending tx for BNB and Matic Network
