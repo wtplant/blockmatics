@@ -35,8 +35,8 @@ Switching to a less expensive EC2 @ `http://ec2-54-87-177-25.compute-1.amazonaws
 
 **TO DO**
 - [x] Set up EC2 free tier instance and test app
-- [ ] Move to a free EC2 instance
-- [ ] Add gas value
+- [x] Move to a free EC2 instance
+- [x] Add gas value
 - [ ] Add pending tx for BNB and Matic Network
 - [ ] Dockerize deploy
 
