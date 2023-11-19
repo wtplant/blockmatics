@@ -32,11 +32,12 @@ You can use the following public facing link for williamplant.net `http://ec2-54
 **Note:** *there is no ssl, i.e. https and the port number for streamlit has been appended to the end of the link.*
 
 **TO DO**
+- [ ] Move to lightsail and Dockerize deploy. EC2 instances seem to have a cost associated with each, even the free tier.
 - [x] Set up EC2 free tier instance and test app
 - [x] Move to a free EC2 instance
 - [x] Add gas value
 - [ ] Add pending tx for BNB and Matic Network
-- [ ] Dockerize deploy
+
 
 
 
