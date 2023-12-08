@@ -33,6 +33,7 @@ You can use the following public facing link for williamplant.net `http://ec2-54
 
 **TO DO**
 - [ ] Move to lightsail and Dockerize deploy. EC2 instances seem to have a cost associated with each, even the free tier.
+- [ ] Additionaly they have an option for deployment on K8s https://docs.streamlit.io/knowledge-base/tutorials/deploy/kubernetes
 - [x] Set up EC2 free tier instance and test app
 - [x] Move to a free EC2 instance
 - [x] Add gas value
