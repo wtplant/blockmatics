@@ -44,9 +44,9 @@ with col2:
 with col3:
      st.subheader('BNB Chain', divider='orange')
      try:
-          w4 = Web3(HTTPProvider('https://binance.llamarpc.com'))  # Primary provider
+          w4 = Web3(HTTPProvider('https://bsc-dataseed.bnbchain.org'))  # Primary provider
      except:
-          w4 = Web3(HTTPProvider('https://bsc-dataseed.bnbchain.org'))  # Backup provider
+          w4 = Web3(HTTPProvider('https://endpoints.omniatech.io/v1/bsc/mainnet/public'))  # Backup provider
 
      #w4 = Web3(HTTPProvider('https://binance.llamarpc.com'))  # Connecting to Binance Smart Chain
      st.write('**chain ID:**', w4.eth.chain_id, 'hexidecimal: 0x38')  # Displaying BSC chain ID
@@ -58,7 +58,11 @@ with col3:
 # Column 3: Displaying information about Polygon (Matic)
 with col4:
      st.subheader('Polygon', divider='violet')
-     w5 = Web3(HTTPProvider('https://polygon.llamarpc.com'))  # Connecting to Polygon
+     try:
+          w5 = Web3(HTTPProvider('https://polygon.llamarpc.com'))  # Primary provider
+     except:
+          w5 = Web3(HTTPProvider('https://endpoints.omniatech.io/v1/matic/mainnet/public'))  # Backup provider
+     #w5 = Web3(HTTPProvider('https://polygon.llamarpc.com'))  # Connecting to Polygon
      st.write("**chain ID:**", w5.eth.chain_id, 'hexidecimal: 0x89')  # Displaying Polygon chain ID
      st.write("**block height:**", w5.eth.block_number)  # Displaying the current block number of Polygon
      st.write("**current gas:**", w5.eth.gas_price, "wei")  # Displaying the current gas price of Polygon
