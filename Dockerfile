@@ -8,11 +8,10 @@ WORKDIR /blockmatics
 COPY . /app
 
 # Install any needed packages specified in requirements.txt
-RUN pip install -r /blockmatics/requirements.txt
+RUN pip3 install -r ./requirements.txt
 
 # Make port 80 available to the world outside this container
-EXPOSE 80, 8501
-
+EXPOSE 8501
 
 # Run your Python script when the container launches
 CMD ["streamlit", "run",  "/app/nodestream.py"]
