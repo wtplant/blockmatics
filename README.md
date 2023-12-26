@@ -32,6 +32,7 @@ You can use the following public facing link for williamplant.net `http://ec2-54
 **Note:** *there is no ssl, i.e. https and the port number for streamlit has been appended to the end of the link.*
 
 **Docker Repo** https://hub.docker.com/repository/docker/wtplant/blocktime/general
+*Note: use the same EC2 instance, just need to kill the current streamlit process from running, see above*
 
 **TO DO**
 - [ ] Move to lightsail and Dockerize deploy. EC2 instances seem to have a cost associated with each, even the free tier.
