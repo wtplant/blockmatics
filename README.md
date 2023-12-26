@@ -31,6 +31,8 @@ You can check the process ID of the streamlit process ID with one of the followi
 You can use the following public facing link for williamplant.net `http://ec2-54-87-177-25.compute-1.amazonaws.com:8501/`
 **Note:** *there is no ssl, i.e. https and the port number for streamlit has been appended to the end of the link.*
 
+**Docker Repo** https://hub.docker.com/repository/docker/wtplant/blocktime/general
+
 **TO DO**
 - [ ] Move to lightsail and Dockerize deploy. EC2 instances seem to have a cost associated with each, even the free tier.
 - [ ] Additionaly they have an option for deployment on K8s https://docs.streamlit.io/knowledge-base/tutorials/deploy/kubernetes
