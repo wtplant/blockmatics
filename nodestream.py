@@ -8,7 +8,7 @@ import requests  # A library to make HTTP requests
 col1, col2, col3, col4 = st.columns(4,gap="medium")
 
 with col1:
-     st.image('1939.png')
+     st.image('/app/1939.png')
      st.markdown('**LIVE FROM THE BLOCKCHAIN**')
      
 # Column 1: Displaying information about Ethereum blockchain
