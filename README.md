@@ -1,8 +1,9 @@
 # blockmatics
-This is a streamlit app deployed on an EC2 instance. App utilizes the JSON RPC API to capture live blockchian data. 
+This is a streamlit app hosted on an EC2 instance and **now deployed via Docker Container**. App utilizes the JSON RPC API to capture live blockchian data. 
 This includes new blocks produced on the top chains by TVL. 
 
-*The next iteration will be deploying this app via Docker*
+ 
+~~*The next iteration will be deploying this app via Docker*~~
 
 **streamlit docs:**
 https://docs.streamlit.io/
@@ -35,7 +36,7 @@ You can use the following public facing link for williamplant.net `http://ec2-54
 *Note: use the same EC2 instance, just need to kill the current streamlit process from running, see above*
 
 **TO DO**
-- [ ] Move to lightsail and Dockerize deploy. EC2 instances seem to have a cost associated with each, even the free tier.
+- [x] Move to lightsail and Dockerize deploy. EC2 instances seem to have a cost associated with each, even the free tier.
 - [ ] Additionaly they have an option for deployment on K8s https://docs.streamlit.io/knowledge-base/tutorials/deploy/kubernetes
 - [x] Set up EC2 free tier instance and test app
 - [x] Move to a free EC2 instance
