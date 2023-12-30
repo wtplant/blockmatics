@@ -35,6 +35,12 @@ You can use the following public facing link for williamplant.net `http://ec2-54
 **Docker Repo** https://hub.docker.com/repository/docker/wtplant/blocktime/general
 *Note: use the same EC2 instance, just need to kill the current streamlit process from running, see above*
 
+Docker commands to build and run container:
+`docker build -t <Build-Name> .` once the build it successful run `docker run -p 8501:8501 <Build-Name>`
+
+To push to Docker hub the cammand is `docker push wtplant/<repo-name:build-name>`
+
+
 **TO DO**
 - [x] Move to lightsail and Dockerize deploy. EC2 instances seem to have a cost associated with each, even the free tier.
 - [ ] Additionaly they have an option for deployment on K8s https://docs.streamlit.io/knowledge-base/tutorials/deploy/kubernetes
