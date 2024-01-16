@@ -36,7 +36,12 @@ You can use the following public facing link for williamplant.net `http://ec2-54
 *Note: use the same EC2 instance, just need to kill the current streamlit process from running, see above*
 
 Docker commands to build and run container:
-`docker build -t <Build-Name> .` once the build is successful run `docker run -p 8501:8501 <Build-Name>`
+`docker build -t <Build-Name> .` (note: don't forget `.` here which referes to the current directory where the docker file is hosted)
+
+once the build is successful run `docker run -p 8501:8501 <Build-Name>` or alternatively `docker run --name my_custom_name -p 8501:8501 <Build-Name>
+` to add custom container name. 
+
+to stop a container run `docker stop [container_name_or_id]`
 
 To push to Docker hub the cammand is `docker push wtplant/<repo-name:build-name>`
 
