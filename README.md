@@ -46,13 +46,7 @@ to stop a container run `docker stop [container_name_or_id]`
 To push to Docker hub the cammand is `docker push wtplant/<repo-name:build-name>`
 
 
-**TO DO**
-- [x] Move to lightsail and Dockerize deploy. EC2 instances seem to have a cost associated with each, even the free tier.
-- [ ] Additionaly they have an option for deployment on K8s https://docs.streamlit.io/knowledge-base/tutorials/deploy/kubernetes
-- [x] Set up EC2 free tier instance and test app
-- [x] Move to a free EC2 instance
-- [x] Add gas value
-- [ ] Add pending tx for BNB and Matic Network
+
 
 
 
