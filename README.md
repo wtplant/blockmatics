@@ -45,6 +45,8 @@ to stop a container run `docker stop [container_name_or_id]`
 
 To push to Docker hub the cammand is `docker push wtplant/<repo-name:build-name>`
 
+### good resource for free RPC endpoints https://chainlist.org/
+
 
 
 
