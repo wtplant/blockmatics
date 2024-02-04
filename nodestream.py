@@ -14,7 +14,10 @@ with col1:
 # Column 1: Displaying information about Ethereum blockchain
 with col2:
      st.subheader('Ethereum', divider='rainbow')
-     w3 = Web3(HTTPProvider('https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW'))  # Connecting to Ethereum mainnet using Alchemy
+     try:
+          w3 = Web3(HTTPProvider('https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW'))  # Connecting to Ethereum mainnet using Alchemy
+     except:
+          w3 = Web3(HTTPProvider('https://spring-fluent-frog.quiknode.pro/9dd4efa7281f4bfd7f7d5ed5548207526912a0e2/'))
      st.write("**chain ID:**", w3.eth.chain_id, 'hexidecimal:0x1')  # Displaying Ethereum chain ID 
      st.write("**block height:**", w3.eth.block_number)  # Displaying the current block number of Ethereum blockchain
 
