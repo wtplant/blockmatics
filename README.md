@@ -41,7 +41,7 @@ Docker commands to build and run container:
 once the build is successful run `docker run -p 8501:8501 <Build-Name>` or alternatively `docker run --name my_custom_name -p 8501:8501 <Build-Name>
 ` to add custom container name. 
 
-to stop a container run `docker stop [container_name_or_id]`
+to stop a container run `docker stop [container_name_or_id]` To view running Docker containers, you can use the command: `docker ps`
 
 To push to Docker hub the cammand is `docker push wtplant/<repo-name:build-name>`
 
