@@ -8,7 +8,7 @@ import requests  # A library to make HTTP requests
 col1, col2, col3, col4 = st.columns(4,gap="medium")
 
 with col1:
-     st.image('/app/xblocks.png')
+     st.image('/app/xblocks.png') #file path is for docker deploy, and does not run locally, remove /app/ to run locally
      st.markdown('**LIVE FROM THE BLOCKCHAIN**')
      
 # Column 1: Displaying information about Ethereum blockchain
