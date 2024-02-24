@@ -1,5 +1,5 @@
 # blockmatics
-This is a streamlit app hosted on an EC2 instance and **now deployed via Docker Container**. App utilizes the JSON RPC API to capture live blockchian data. 
+This is a streamlit app hosted on an EC2 instance and **deployed via Docker Container**. App utilizes the JSON RPC API to capture live blockchian data. 
 This includes new blocks produced on the top chains by TVL. 
 
 **streamlit docs:**
