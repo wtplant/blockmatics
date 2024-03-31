@@ -69,26 +69,6 @@ with col4:
      st.write("**chain ID:**", w5.eth.chain_id, 'hexidecimal: 0x89')  # Displaying Polygon chain ID
      st.write("**block height:**", w5.eth.block_number)  # Displaying the current block number of Polygon
      st.write("**current gas:**", w5.eth.gas_price, "wei")  # Displaying the current gas price of Polygon
-     #pnding tx
      
-     #st.write("**Solana**")  # Displaying title for Solana
-
-     # Making a POST HTTP request to Solana RPC endpoint
-     #response = requests.post("https://api.mainnet-beta.solana.com", json=request("getBlockHeight"))  # Missing 'request' function, you might need to define or import it
-     #parsed = parse(response.json())  # Parsing the JSON response
-     #if isinstance(parsed, Ok):  # Checking if the parsed result is an instance of 'Ok'
-          #st.write("block height:", parsed.result)  # Displaying the block height
-
-# Creating an expander for Ethereum pending transactions
-#with st.expander("Eth Pending tx"):  
-          #st.write('The latest block number is: ', str(w3.eth.blockNumber) + '\n')  # Displaying the latest block number
-
-          # Retrieving pending transactions hash
-          #pending_tx_filter = w3.eth.filter('pending')
-          #pending_tx = pending_tx_filter.get_new_entries()  # Getting new entries from the filter
-
-          # Looping through the list of transactions and displaying the transaction hash
-          #for hash in pending_tx:
-               #st.write('Hash of a Pending Transaction:', w3.toHex(hash))  # Converting the hash to hexadecimal and displaying it
 
 
