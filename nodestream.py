@@ -3,6 +3,8 @@ import streamlit as st  # A library to create web apps for machine learning and 
 import streamlit.components.v1 as components  # Importing components module for Streamlit
 from web3 import Web3, HTTPProvider  # Importing Web3 to interact with Ethereum blockchain and HTTPProvider to connect to a specific Ethereum node
 import requests  # A library to make HTTP requests
+import http.client
+import json  # A library to work with JSON data
 
 # Creating four columns in the Streamlit web app
 col1, col2, col3, col4 = st.columns(4,gap="medium")
@@ -14,6 +16,26 @@ with col1:
 # Column 1: Displaying information about Ethereum blockchain
 with col2:
      st.subheader('Ethereum', divider='rainbow')
+     conn = http.client.HTTPSConnection("pro-api.coinmarketcap.com")
+
+     headersList = {
+     "X-CMC_PRO_API_KEY": "eed711c2-ccef-448f-8b71-16c5056f3dba" 
+     }
+
+     payload = ""
+
+     conn.request("GET", "/v2/cryptocurrency/quotes/latest?slug=ethereum", payload, headersList)
+     response = conn.getresponse()
+     data = response.read()
+
+     # Parse the JSON response
+     parsed_data = json.loads(data.decode("utf-8"))
+
+     # Extract the price of Ethereum in USD
+     eth_price = parsed_data['data']['1027']['quote']['USD']['price']
+
+     # Assuming you're using Streamlit, to display the Ethereum price
+     st.write(f"**Price:** ${eth_price:.2f}")
      try:
           w3 = Web3(HTTPProvider('https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW'))  # Connecting to Ethereum mainnet using Alchemy
      except:
