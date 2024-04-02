@@ -19,7 +19,7 @@ with col2:
      conn = http.client.HTTPSConnection("pro-api.coinmarketcap.com")
 
      headersList = {
-     "X-CMC_PRO_API_KEY": "eed711c2-ccef-448f-8b71-16c5056f3dba" 
+     "X-CMC_PRO_API_KEY": "<PLACE HOLDER FOR API KEY>" 
      }
 
      payload = ""
@@ -68,6 +68,24 @@ with col2:
 # Column 2: Displaying information about Binance Smart Chain
 with col3:
      st.subheader('BNB Chain', divider='orange')
+     # CMC Price data 
+     conn.request("GET", "/v2/cryptocurrency/quotes/latest?slug=bnb", payload, headersList)
+
+     # Get the response from the server
+     response = conn.getresponse()
+     data = response.read()
+
+     # Decode and parse the JSON response
+     parsed_data = json.loads(data.decode("utf-8"))
+
+     # Assuming the BNB data is directly accessible via its slug or ID. The ID for BNB might not be as straightforward as '1027' for Ethereum, so we use a dynamic approach.
+     bnb_data = next(iter(parsed_data['data'].values()))
+
+     # Extract the price of BNB in USD
+     bnb_price = bnb_data['quote']['USD']['price']
+
+     # Use Streamlit to display the BNB price
+     st.write(f"**Price:** ${bnb_price:.2f}")
      try:
           w4 = Web3(HTTPProvider('https://bsc-dataseed.bnbchain.org'))  # Primary provider
      except:
