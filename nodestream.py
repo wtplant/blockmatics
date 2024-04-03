@@ -101,6 +101,24 @@ with col3:
 # Column 3: Displaying information about Polygon (Matic)
 with col4:
      st.subheader('Polygon', divider='violet')
+     conn.request("GET", "/v2/cryptocurrency/quotes/latest?slug=polygon", payload, headersList)
+
+     # Get the response from the server
+     response = conn.getresponse()
+     data = response.read()
+
+     # Decode and parse the JSON response
+     parsed_data = json.loads(data.decode("utf-8"))
+
+     # You need to know the ID for Polygon or access it dynamically. Here's a generic way:
+     # Assuming 'polygon_id' is the variable holding Polygon's ID. It could also be extracted dynamically if needed.
+     polygon_data = next(iter(parsed_data['data'].values()))
+
+     # Extract the price of Polygon in USD
+     polygon_price = polygon_data['quote']['USD']['price']
+
+     # Use Streamlit to display the Polygon price
+     st.write(f"**Price:** ${polygon_price:.2f}")   
      try:
           w5 = Web3(HTTPProvider('https://polygon-pokt.nodies.app'))  # Primary provider
      except: 
