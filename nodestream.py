@@ -54,16 +54,6 @@ with col2:
 # Loop through the list of transaction hashes and display them
      for tx_hash in pending_tx_hashes:
           st.write('**Pending Transaction:**', w3.to_hex(tx_hash))
-
-     
-     #st.write("**Beacon Chain**")  # Displaying title for Beacon Chain
-
-     #res = requests.get('<https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW>')  # Making a GET HTTP request to a specified URL
-     #st.write("headers", res)  # Displaying the HTTP response
-
-     #res2 = requests.get('https://eth-mainnet.g.alchemy.com/v2/R7icSkXsQxK11r2UPZBCI0zvC0QOeDqW')  # Making another GET HTTP request to a specified URL
-     #st.write("genesis", res2)  # Displaying the HTTP response
-     
      
 # Column 2: Displaying information about Binance Smart Chain
 with col3:
