@@ -19,7 +19,7 @@ with col2:
      conn = http.client.HTTPSConnection("pro-api.coinmarketcap.com")
 
      headersList = {
-     "X-CMC_PRO_API_KEY": "eed711c2-ccef-448f-8b71-16c5056f3dba" 
+     "X-CMC_PRO_API_KEY": "<API Place Holder>" 
      }
 
      payload = ""
