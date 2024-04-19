@@ -5,6 +5,10 @@ from web3 import Web3, HTTPProvider  # Importing Web3 to interact with Ethereum 
 import requests  # A library to make HTTP requests
 import http.client
 import json  # A library to work with JSON data
+import toml
+
+secrets = toml.load('secrets.toml')
+api_key = secrets['X-CMC_PRO_API_KEY']
 
 # Creating four columns in the Streamlit web app
 col1, col2, col3, col4 = st.columns(4,gap="medium")
@@ -19,7 +23,7 @@ with col2:
      conn = http.client.HTTPSConnection("pro-api.coinmarketcap.com")
 
      headersList = {
-     "X-CMC_PRO_API_KEY": "<API Place Holder>" 
+     "X-CMC_PRO_API_KEY": api_key
      }
 
      payload = ""
